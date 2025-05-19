@@ -1,0 +1,127 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #666480;
+    color: #222;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Cabeçalho fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1e1e2f;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+header nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+header nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover,
+header nav a:focus {
+    background-color: #3f51b5;
+    color: #271c49;
+    outline: none;
+}
+
+/* Espaço para o header fixo */
+main {
+    max-width: 1100px;
+    margin: 90px auto 40px; /* espaço para o header fixo */
+    padding: 0 20px;
+    min-height: 100vh;
+}
+
+/* Galeria estilo cards */
+.galeria .item {
+    min-height: 320px; /* ajuste conforme seu design */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria .item img {
+    width: 100%;
+    height: auto; /* altura proporcional */
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.galeria .item img:hover {
+    transform: scale(1.05);
+}
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5f5c76; /* cor do fundo geral */
+    padding: 50px 20px;
+}
+
+.intro-box {
+    background-color: #120a33; /* cor do container */
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.intro-box h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.intro-box p {
+    font-size: 1.1em;
+    color: #c8c6e2;
+}
+
+.intro-box hr {
+    margin: 20px auto;
+    border: none;
+    border-top: 1px solid #c8c6e2;
+    width: 80%;
+}
